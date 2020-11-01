@@ -1,0 +1,18 @@
+<table>
+    <th>
+        <th> Id </th>
+        <th> Name </th>
+        <th> Email </th>
+        <th> Contact </th>
+    </th>
+     
+    {% for i in employee %}
+    <tr>
+        <td>{{ i.eid}}</td>
+        <td>{{ i.ename}}</td>
+        <td>{{ i.eemail}}</td>
+        <td>{{ i.econtact}}</td>
+    
+    </tr>
+    {% endfor %}
+</table>

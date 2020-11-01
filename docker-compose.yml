@@ -1,0 +1,19 @@
+version: "3.7"
+   
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Shivam#254
+  web:
+    build: .
+    command: bash -c "python manage.py migrate && python manage.py runserver"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
